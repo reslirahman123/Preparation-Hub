@@ -1,0 +1,198 @@
+.transaction-details {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.transaction-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.transaction-header h2 {
+  color: #333;
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+}
+
+.transaction-header p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.transaction-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+/* QR Code Section */
+.qr-section {
+  background: #f8f9fa;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  position: sticky;
+  top: 2rem;
+}
+
+.qr-section h3 {
+  margin-bottom: 1.5rem;
+  color: #333;
+  font-size: 1.3rem;
+}
+
+.qr-code-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.qr-code-placeholder {
+  width: 200px;
+  height: 200px;
+  border: 2px solid #dee2e6;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.qr-pattern {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  gap: 2px;
+  width: 160px;
+  height: 160px;
+}
+
+.qr-row {
+  display: contents;
+}
+
+.qr-cell {
+  background: #f8f9fa;
+  border-radius: 1px;
+}
+
+.qr-cell.filled {
+  background: #333;
+}
+
+.qr-info {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+}
+
+.qr-data {
+  max-width: 200px;
+  word-break: break-all;
+  background: #e9ecef;
+  padding: 0.5rem;
+  border-radius: 4px;
+  font-family: monospace;
+}
+
+/* Form Section */
+.form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.form-group {
+  background: #ffffff;
+  padding: 2rem;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+}
+
+.form-group h3 {
+  margin-bottom: 1.5rem;
+  color: #333;
+  font-size: 1.3rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #007bff;
+}
+
+.user-details-form,
+.business-details-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .transaction-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .qr-section {
+    position: static;
+    order: 2;
+  }
+  
+  .form-section {
+    order: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .transaction-details {
+    padding: 1rem;
+  }
+  
+  .transaction-header h2 {
+    font-size: 1.5rem;
+  }
+  
+  .form-group {
+    padding: 1.5rem;
+  }
+  
+  .user-details-form,
+  .business-details-form {
+    grid-template-columns: 1fr;
+  }
+  
+  .qr-code-placeholder {
+    width: 160px;
+    height: 160px;
+  }
+  
+  .qr-pattern {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .transaction-details {
+    padding: 0.5rem;
+  }
+  
+  .transaction-header {
+    padding: 1rem;
+  }
+  
+  .form-group {
+    padding: 1rem;
+  }
+  
+  .qr-section {
+    padding: 1rem;
+  }
+}
