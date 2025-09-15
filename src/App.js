@@ -1,7 +1,7 @@
 
 import User from "./components/HOC/User";
-import UserCopy from "./UserCopy";
-import Button from "./components/Button/Button";
+// import UserCopy from "./UserCopy";
+// import Button from "./components/Button/Button";
 import FetchCall from "./components/prep/FetchCall";
 import HideAndShow from "./components/prep/HideAndShow";
 import Kiosk from "./components/Kiosk/Kiosk";
